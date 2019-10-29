@@ -1,0 +1,7 @@
+<h2>List of tshirts</h2>
+<ul class="tshirts">
+  <li *ngFor="let tshirt of tshirts">
+    <a routerLink="/tshirts/{{tshirt.id}}"><span class="badge">{{tshirt.id}}</span> {{tshirt.type}}</a>
+  </li>
+</ul>
+<button routerLink="/tshirt-create">Create a tshirt</button>
