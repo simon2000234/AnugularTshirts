@@ -12,7 +12,7 @@ export class TshirtService {
     return this.http.get<Tshirt[]>(environment.baseUrl + 'tshirts');
   }
   getTshirtById(id: number): Observable<Tshirt> {
-    return this.http.get<Tshirt>(environment.baseUrl + 'tshirts/ ' + id);
+    return this.http.get<Tshirt>(environment.baseUrl + 'tshirts/' + id);
   }
   createTshirt(tshirt: Tshirt): void {
     this.http.post(environment.baseUrl + 'tshirts', tshirt);
