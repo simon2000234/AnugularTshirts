@@ -14,8 +14,15 @@ export class TshirtService {
   getTshirtById(id: number): Observable<Tshirt> {
     return this.http.get<Tshirt>(environment.baseUrl + 'tshirts/' + id);
   }
-  createTshirt(tshirt: Tshirt): void {
-    this.http.post(environment.baseUrl + 'tshirts', tshirt);
+  createTshirt(tshirt: Tshirt): Observable<Tshirt> {
+    return this.http.post<Tshirt>(environment.baseUrl + 'tshirts', tshirt);
+  }
+  deleteTshirt(id: number): void {
+    this.http.delete(environment.baseUrl + 'tshirts/' + id)
+      .subscribe();
+  }
+  updateTshirt(tshirt: Tshirt): Observable<Tshirt> {
+    return this.http.put<Tshirt>(environment.baseUrl + 'tshirts/' + tshirt.id, tshirt);
   }
   constructor(private http: HttpClient) { }
 }

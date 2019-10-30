@@ -15,6 +15,9 @@ export class TshirtListComponent implements OnInit {
     this.tshirtService.getTshirts()
       .subscribe(tshirts => this.tshirts = tshirts);
   }
+  detleteTshirt(id: number): void {
+    this.tshirtService.deleteTshirt(id);
+}
   ngOnInit() {
     this.getTshirts();
   }

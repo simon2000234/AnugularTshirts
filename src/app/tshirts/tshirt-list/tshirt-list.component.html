@@ -2,6 +2,8 @@
 <ul class="tshirts">
   <li *ngFor="let tshirt of tshirts">
     <a routerLink="/tshirts/{{tshirt.id}}"><span class="badge">{{tshirt.id}}</span> {{tshirt.type}}</a>
+    <button routerLink="/tshirt-update/{{tshirt.id}}">Update</button>
+    <button (click)="detleteTshirt(tshirt.id)">Delete</button>
   </li>
 </ul>
 <button routerLink="/tshirt-create">Create a tshirt</button>

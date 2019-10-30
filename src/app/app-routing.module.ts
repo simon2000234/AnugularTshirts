@@ -5,12 +5,15 @@ import {TshirtListComponent} from './tshirts/tshirt-list/tshirt-list.component';
 import {HomeComponent} from './tshirts/home/home.component';
 import {TshirtDetailComponent} from './tshirts/tshirt-detail/tshirt-detail.component';
 import {TshirtCreateComponent} from './tshirts/tshirt-create/tshirt-create.component';
+import {TshirtUpdateComponent} from './tshirts/tshirt-update/tshirt-update.component';
 
 const routes: Routes = [
   { path: 'tshirts', component: TshirtListComponent },
   { path: 'tshirt-create', component: TshirtCreateComponent },
   { path: '', component: HomeComponent },
   { path: 'tshirts/:id', component: TshirtDetailComponent },
+  { path: 'tshirt-update/:id', component: TshirtUpdateComponent },
+
 
 
 ];
