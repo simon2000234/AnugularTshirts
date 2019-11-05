@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'https://tshirtshopdab.azurewebsites.net/api/'
+  baseUrl: 'https://localhost:44363/api/'
 };
 
 /*
