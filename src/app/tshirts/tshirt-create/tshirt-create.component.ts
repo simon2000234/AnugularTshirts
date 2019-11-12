@@ -15,7 +15,7 @@ export class TshirtCreateComponent implements OnInit {
     size: [''],
     color: [''],
     type: [''],
-    isMan: [''],
+    isMan: [false],
     imgLink: ['']})
   constructor(private tshirtService: TshirtService, private form: FormBuilder, private router: Router) { }
   createTshirt(tshirt: Tshirt): void {

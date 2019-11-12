@@ -1,2 +1,35 @@
 <h1>Welcome to the home page</h1>
 <h3>Use the navbar to navigate the site</h3>
+<div>
+  <p>
+    Username: DabNormal, Password: password<br>
+    Username: DabAdmin, Password: password
+  </p>
+</div>
+<div>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+      <label>Username</label>
+      <input type="text" formControlName="username" class="form-control" required/>
+      <div *ngIf="username.invalid && submitted" class="alert-danger">
+        <div *ngIf="username.errors.required">Username is required</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Password</label>
+      <input type="password" formControlName="password" class="form-control" required/>
+      <div *ngIf="password.invalid && submitted" class="alert-danger">
+        <div *ngIf="password.errors.required">Username is required</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <button class="button">Login</button>
+    </div>
+    <div *ngIf="errormessage" class="alert-danger">{{errormessage}}</div>
+    <div>
+      <h3 *ngIf="loading">Loading..</h3>
+    </div>
+
+  </form>
+</div>

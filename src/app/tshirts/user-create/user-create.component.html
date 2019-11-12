@@ -1,0 +1,7 @@
+<p>user-create works!</p>
+<form [formGroup]="userForm" (ngSubmit)="createUser(userForm.value)">
+  <label>Username <input type="text" formControlName="username"></label>
+  <label>IsAdmin <input type="checkbox" formControlName="isAdmin"></label>
+  <label>Password <input type="text" formControlName="password"></label>
+  <button type="submit">Submit</button>
+</form>
